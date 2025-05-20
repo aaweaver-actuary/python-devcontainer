@@ -5,7 +5,7 @@ REPO = aaweaver9/$(IMAGE_NAME)
 .PHONY: build shell push
 
 build:
-	docker build -t $(IMAGE_NAME):$(TAG) .
+	docker build -t $(IMAGE_NAME):$(TAG) -f py-dev.Dockerfile .
 
 shell:
 	docker run --rm -it $(IMAGE_NAME):$(TAG) /usr/bin/zsh

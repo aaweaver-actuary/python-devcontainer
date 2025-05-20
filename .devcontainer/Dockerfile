@@ -1,0 +1,4 @@
+FROM aaweaver9/py:latest
+ENV PYTHONPATH=/app
+WORKDIR /app
+EXPOSE 8888
