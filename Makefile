@@ -1,6 +1,6 @@
-IMAGE_NAME = python-devcontainer
-TAG = latest
-REPO = your-docker-repo/$(IMAGE_NAME)
+IMAGE_NAME = py
+TAG = v2.0
+REPO = aaweaver9/$(IMAGE_NAME)
 
 .PHONY: build shell push
 
@@ -13,3 +13,5 @@ shell:
 push:
 	docker tag $(IMAGE_NAME):$(TAG) $(REPO):$(TAG)
 	docker push $(REPO):$(TAG)
+	docker tag $(IMAGE_NAME):$(TAG) $(REPO):latest
+	docker push $(REPO):latest
